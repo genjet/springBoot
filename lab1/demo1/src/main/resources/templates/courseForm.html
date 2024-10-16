@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>課程新增表單</h1>
+<p th:text="${courseForm}"></p>
+<p th:text="${form1}"></p>
+<p th:text="${courseForm.getCourseId()}"></p>
+<p th:text="${courseForm.setDuration(10)}"></p>
+<p th:text="${courseForm.getDuration()}"></p>
+<h1>從model裡</h1>
+<p th:text="${course2}"></p>
+<p th:text="${form2}"></p>
+<form th:object="${courseForm}" method="POST" th:action="@{/course}">
+    <table>
+        <tr>
+            <td>
+                <label for="courseId">course id</label>
+            </td>
+            <td>
+                <input id="courseId" type="text" th:field="*{courseId}">
+            </td>
+            <td th:errors="*{courseId}"></td>
+        </tr>
+        <tr>
+            <td><label for="courseName">course name</label></td>
+            <td><input id="courseName" type="text" th:field="*{courseName}"></td>
+            <td th:errors="*{courseName}"></td>
+        </tr>
+        <tr>
+            <td><label for="duration">course duration</label></td>
+            <td><input id="duration" type="number" th:field="*{duration}"></td>
+            <td th:errors="*{duration}"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">submit</button>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+</body>
+</html>

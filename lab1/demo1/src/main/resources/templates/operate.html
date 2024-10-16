@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>核取方塊的lab</p>
+<p th:text="${form1}"></p>
+<form th:action="@{submit}" method="post" th:object="${form1}">
+    <div th:each="c,iter:*{conditions}">
+        <!--        <p th:text="${iter.index}"></p>-->
+        <!--        <p th:text="${iter.count}"></p>-->
+        <label th:text="*{names[__${iter.index}__]}"></label>
+        <input type="checkbox" th:field="*{conditions[__${iter.index}__]}"/>
+    </div>
+    <!--    <div th:each="c:*{conditions}">-->
+    <!--        <p th:text="${c}"></p>-->
+    <!--    </div>-->
+    <!--    <div th:each="n:*{names}">-->
+    <!--        <p th:text="${n}"></p>-->
+    <!--    </div>-->
+</form>
+</body>
+</html>
