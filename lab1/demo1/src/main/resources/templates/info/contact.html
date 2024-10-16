@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -6,6 +5,22 @@
     <title>聯絡資訊</title>
 </head>
 <body>
+<p>get data from application.properties : [[${mainCourseName}]]</p>
+
+<p>course object</p>
+<p>[[${jcourse}]]</p>
+<ul>
+    <li th:text="${jcourse}"></li>
+    <li th:text="${jcourse.id}"></li>
+    <li th:text="${jcourse.name}"></li>
+    <li th:text="${jcourse.duration}"></li>
+    <li th:text="${jcourse.fee}"></li>
+    <!--    <li th:text="${jcourse.instructor}"></li>-->
+</ul>
+<p th:text="${jcourse}"></p>
+<p>cpp start</p>
+<p th:text="${cppcourse}"></p>
+<p>cpp end</p>
 <h1>如果有問題, 請聯絡.....人</h1>
 </body>
 </html>

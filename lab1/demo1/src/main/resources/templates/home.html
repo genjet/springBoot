@@ -7,6 +7,10 @@
 </head>
 <body>
 <h1>這是我的第一個spring boot MVC</h1>
+<h2 style="background-color: yellow;" th:text="${message}"></h2>
+<h2 style="background-color: blue;" th:text="${message2}"></h2>
+<h2 style="background-color: red;" th:text="'需要處理的是'+${message2}+'!!!'"></h2>
+<h2 style="background-color: yellow;">需要處理的是 [[${message2}]] !!!</h2>
 <p>html image</p>
 <img src="/images/UCOM.png">
 <p>thymeleaf image</p>
