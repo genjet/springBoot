@@ -1,6 +1,5 @@
 package com.uuu.demo3.runner;
 
-import com.uuu.demo3.calc.Calculator;
 import com.uuu.demo3.race.Racing;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,7 @@ public class ExplainDIRunner4 implements CommandLineRunner {
     @Autowired
     @Qualifier("bike")
     private Racing racing2;
+
     @Override
     public void run(String... args) throws Exception {
         log.info("racing1 status={}", racing1.status());

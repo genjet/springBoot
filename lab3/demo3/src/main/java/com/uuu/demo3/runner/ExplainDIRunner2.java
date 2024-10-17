@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Order(2)
 public class ExplainDIRunner2 implements CommandLineRunner {
-//    //    @Autowired
+    //    //    @Autowired
 //    private final Calculator cal1;
 //    // 可以使用建構子方式將物件傳入取代 autowired使用
 //    public ExplainDIRunner2(Calculator cal1) {

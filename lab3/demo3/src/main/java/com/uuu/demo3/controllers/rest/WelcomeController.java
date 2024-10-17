@@ -11,6 +11,7 @@ import java.util.Date;
 public class WelcomeController {
     @Autowired
     private Message message;
+
     @RequestMapping("/welcome")
     Message home() {
         message.setCost(3.45f);

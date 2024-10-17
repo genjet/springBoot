@@ -22,6 +22,7 @@ public class ExplainDIRunner3 implements CommandLineRunner {
         Racing r1 = context.getBean("bicycle", Racing.class);
         log.info("r1 status={}", r1.status());
         Racing r2 = context.getBean("bike", Racing.class);
-        log.info("r2 status={}",r2.status());
+        log.info("r2 status={}", r2.status());
     }
 }
+
