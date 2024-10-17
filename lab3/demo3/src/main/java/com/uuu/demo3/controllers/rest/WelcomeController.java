@@ -10,13 +10,13 @@ import java.util.Date;
 @RestController
 public class WelcomeController {
     @Autowired
-    private Message m;
+    private Message message;
     @RequestMapping("/welcome")
     Message home() {
-        m.setCost(3.45f);
-        m.setValid(true);
-        m.setDate(new Date());
-        m.setDetail("打一些中文試試");
-        return m;
+        message.setCost(3.45f);
+        message.setValid(true);
+        message.setDate(new Date());
+        message.setDetail("打一些中文試試");
+        return message;
     }
 }

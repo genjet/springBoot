@@ -19,7 +19,10 @@ public class ExplainDIRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         log.info("will expalin dependency injection(DI) here");
         log.info("spring context={}", context);
-        Calculator c1 = context.getBean(Calculator.class);
-        log.info("calculate 1 and 2 is:{}", c1.calc(1, 2));
+        Calculator c1 = context.getBean("add", Calculator.class);
+        log.info("[c1]calculate 1 and 2 is:{}", c1.calc(1, 2));
+        Calculator c2 = context.getBean("sub", Calculator.class);
+        log.info("[c2]calculate 1 and 2 is:{}", c2.calc(1, 2));
+
     }
 }

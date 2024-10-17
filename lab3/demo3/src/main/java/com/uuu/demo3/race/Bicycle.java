@@ -2,7 +2,8 @@ package com.uuu.demo3.race;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
+@Component("bicycle")
 public class Bicycle implements Racing{
     @Override
     public String status() {
